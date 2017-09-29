@@ -77,7 +77,10 @@ class StoreData {
 
           $this->prepareJson($detailedOrders);
 
-          return json_encode((object)$detailedOrders);
+          $result = [];
+          $result['orders'] = $detailedOrders;
+
+          return json_encode((object) $result);
           // return orders sorted by highest value. Be sure to include the order total in the response
         } elseif ($option == 2) {
           $detailedOrders = $this->getOrderDetails();
@@ -86,7 +89,10 @@ class StoreData {
             return $a['dateOrdered'] <=>  $b['dateOrdered'] ;
           });
 
-          return json_encode(((object) $detailedOrders));
+          $result = [];
+          $result['orders'] = $detailedOrders;
+
+          return json_encode((object) $result);
           // return orders sorted by date
         } elseif ($option == 3) {
           $detailedOrders = $this->getOrderDetails();
@@ -97,27 +103,40 @@ class StoreData {
 
           $this->prepareJson($detailedOrders);
 
-          return json_encode((object) $detailedOrders);
+          $result = [];
+          $result['orders'] = $detailedOrders;
+
+          return json_encode((object) $result);
           // return orders without items
         }
     }
 
-    public function getOrderDetails() {
+    private function getOrderDetails() {
       $detailedOrders = [];
+
       $customers = (array) $this->customers;
       $orderItems = (array) $this->order_items;
 
       foreach ($this->orders as $order) {
-          $order['customer'] = $customers[array_search($order['customerId'], array_column($customers, 'id'))];
-          unset($order['customerId']);
-          $order['orderItems'] = $orderItems[array_search($order['id'], array_column($customers, 'id'))]['items'];
+        if (($foundIndex = array_search($order['customerId'], array_column($customers, 'id'))) !== false) {
+          $order['customer'] = $customers[$foundIndex];
+        }
+        else {
+          $order['customer'] = 'No record';
+        }
 
-          uasort($order['orderItems'], function($a, $b){
-            return  $b['value'] <=> $a['value'];
-          });
+        unset($order['customerId']);
 
-          $order['total'] = array_sum(array_column($order['orderItems'],'value'));
-          $detailedOrders[] = $order;
+        $order['orderItems'] = $orderItems[array_search($order['id'], array_column($orderItems, 'id'))]['items'];
+
+        uasort($order['orderItems'], function ($a, $b) {
+          return $b['value'] <=> $a['value'];
+        });
+
+        $order['total'] = array_sum(array_column($order['orderItems'], 'value'));
+        $orderId = $order['id'];
+        unset($order['id']);
+        $detailedOrders[$orderId] = $order;
       }
 
       return $detailedOrders;
@@ -126,7 +145,6 @@ class StoreData {
     private function prepareJson(&$orderDetails) {
 
       foreach ($orderDetails as &$orderDetail) {
-
         $orderDetailArranged = [];
         $orderDetailArranged['date'] = $orderDetail['dateOrdered'];
         $orderDetailArranged['total'] = $orderDetail['total'];
