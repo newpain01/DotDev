@@ -70,10 +70,12 @@ class StoreData {
         ];
     }
 
-    public function formatData ($option) {
+    public function formatData($option) {
         // All data should be returned as formatted JSON.
         if ($option == 1) {
           $detailedOrders = $this->getOrderDetails();
+
+          $this->prepareJson($detailedOrders);
 
           return json_encode((object)$detailedOrders);
           // return orders sorted by highest value. Be sure to include the order total in the response
@@ -89,14 +91,13 @@ class StoreData {
         } elseif ($option == 3) {
           $detailedOrders = $this->getOrderDetails();
 
-          $emptyOrders = [];
-          foreach ($detailedOrders as $order) {
-            if (empty($order['orderItems'])) {
-              $emptyOrders[] = $order;
-            }
+          foreach ($detailedOrders as &$detailedOrder) {
+             unset($detailedOrder['orderItems']);
           }
 
-          return json_encode((object) $emptyOrders);
+          $this->prepareJson($detailedOrders);
+
+          return json_encode((object) $detailedOrders);
           // return orders without items
         }
     }
@@ -120,6 +121,28 @@ class StoreData {
       }
 
       return $detailedOrders;
+    }
+
+    private function prepareJson(&$orderDetails) {
+
+      foreach ($orderDetails as &$orderDetail) {
+
+        $orderDetailArranged = [];
+        $orderDetailArranged['date'] = $orderDetail['dateOrdered'];
+        $orderDetailArranged['total'] = $orderDetail['total'];
+        $orderDetailArranged['customer'] = $orderDetail['customer'];;
+
+        $orderItems = [];
+
+        if (isset($orderDetail['orderItems'])) {
+          foreach ($orderDetail['orderItems'] as $order) {
+            $orderItems[] = (object) $order;
+          }
+          $orderDetailArranged['order_items'] = $orderItems;
+        }
+
+        $orderDetail = $orderDetailArranged;
+      }
     }
 }
 

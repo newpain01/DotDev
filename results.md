@@ -4,160 +4,154 @@
 
 {
   "0":{
-    "id":"DwsNDQ4JDQEEBQIJBAwNBA",
-    "dateOrdered":1506476504,
+    "date":1506476504,
+    "total":111.55,
     "customer":{
       "id":"BQYLCQ0CCwIOBgYNBAcACw",
       "name":"Bob"
     },
-    "orderItems":{
-      "2":{
+    "order_items":[
+      {
         "id":"BwEOBwgNDQ4NCQkHBA8IDA",
         "value":101,
         "name":"ecbdb882ae865a07d87611437fda0772"
       },
-      "0":{
+      {
         "id":"CgkCDwwDDgYODgYFBAwKAQ",
         "value":10,
         "name":"b0a8b6f820479900e34d34f6b8a4af73"
       },
-      "1":{
+      {
         "id":"DQcJBAYFCAoCBAYJBAIGDQ",
         "value":0.55,
         "name":"cf3298bb5cbfd41aa44ba18b4f305a36"
       }
-    },
-    "total":111.55
+    ]
   },
   "1":{
-    "id":"DwsPBQ0BAA0BBwwMBAoECA",
-    "dateOrdered":1506480104,
+    "date":1506480104,
+    "total":111.55,
     "customer":{
       "id":"BQYLCQ0CCwIOBgYNBAcACw",
       "name":"Bob"
     },
-    "orderItems":{
-      "2":{
+    "order_items":[
+      {
         "id":"BwEOBwgNDQ4NCQkHBA8IDA",
         "value":101,
         "name":"ecbdb882ae865a07d87611437fda0772"
       },
-      "0":{
+      {
         "id":"CgkCDwwDDgYODgYFBAwKAQ",
         "value":10,
         "name":"b0a8b6f820479900e34d34f6b8a4af73"
       },
-      "1":{
+      {
         "id":"DQcJBAYFCAoCBAYJBAIGDQ",
         "value":0.55,
         "name":"cf3298bb5cbfd41aa44ba18b4f305a36"
       }
-    },
-    "total":111.55
+    ]
   },
   "2":{
-    "id":"DAEFCwUAAgQPAQIIBA4IBA",
-    "dateOrdered":1506562904,
+    "date":1506562904,
+    "total":111.55,
     "customer":{
       "id":"CQwPDAkDDAQLBQsOBAcMBw",
       "name":"Jan"
     },
-    "orderItems":{
-      "2":{
+    "order_items":[
+      {
         "id":"BwEOBwgNDQ4NCQkHBA8IDA",
         "value":101,
         "name":"ecbdb882ae865a07d87611437fda0772"
       },
-      "0":{
+      {
         "id":"CgkCDwwDDgYODgYFBAwKAQ",
         "value":10,
         "name":"b0a8b6f820479900e34d34f6b8a4af73"
       },
-      "1":{
+      {
         "id":"DQcJBAYFCAoCBAYJBAIGDQ",
         "value":0.55,
         "name":"cf3298bb5cbfd41aa44ba18b4f305a36"
       }
-    },
-    "total":111.55
+    ]
   },
   "3":{
-    "id":"BAUNCAUAAQYMDgULBAMDAQ",
-    "dateOrdered":1507081304,
+    "date":1507081304,
+    "total":111.55,
     "customer":{
       "id":"BQYLCQ0CCwIOBgYNBAcACw",
       "name":"Bob"
     },
-    "orderItems":{
-      "2":{
+    "order_items":[
+      {
         "id":"BwEOBwgNDQ4NCQkHBA8IDA",
         "value":101,
         "name":"ecbdb882ae865a07d87611437fda0772"
       },
-      "0":{
+      {
         "id":"CgkCDwwDDgYODgYFBAwKAQ",
         "value":10,
         "name":"b0a8b6f820479900e34d34f6b8a4af73"
       },
-      "1":{
+      {
         "id":"DQcJBAYFCAoCBAYJBAIGDQ",
         "value":0.55,
         "name":"cf3298bb5cbfd41aa44ba18b4f305a36"
       }
-    },
-    "total":111.55
+    ]
   },
   "4":{
-    "id":"DAMGAg8GCggLBwkJBAoECg",
-    "dateOrdered":1509068504,
+    "date":1509068504,
+    "total":111.55,
     "customer":{
       "id":"AgsIBAsFAwYCCw8GBAINAQ",
       "name":"Steve"
     },
-    "orderItems":{
-      "2":{
+    "order_items":[
+      {
         "id":"BwEOBwgNDQ4NCQkHBA8IDA",
         "value":101,
         "name":"ecbdb882ae865a07d87611437fda0772"
       },
-      "0":{
+      {
         "id":"CgkCDwwDDgYODgYFBAwKAQ",
         "value":10,
         "name":"b0a8b6f820479900e34d34f6b8a4af73"
       },
-      "1":{
+      {
         "id":"DQcJBAYFCAoCBAYJBAIGDQ",
         "value":0.55,
         "name":"cf3298bb5cbfd41aa44ba18b4f305a36"
       }
-    },
-    "total":111.55
+    ]
   },
   "5":{
-    "id":"CQALBwoDAw0AAQgHBAEJBQ",
-    "dateOrdered":1538012504,
+    "date":1538012504,
+    "total":111.55,
     "customer":{
       "id":"DAEFDQwPDwMCCwULBAAMDg",
       "name":"Fred"
     },
-    "orderItems":{
-      "2":{
+    "order_items":[
+      {
         "id":"BwEOBwgNDQ4NCQkHBA8IDA",
         "value":101,
         "name":"ecbdb882ae865a07d87611437fda0772"
       },
-      "0":{
+      {
         "id":"CgkCDwwDDgYODgYFBAwKAQ",
         "value":10,
         "name":"b0a8b6f820479900e34d34f6b8a4af73"
       },
-      "1":{
+      {
         "id":"DQcJBAYFCAoCBAYJBAIGDQ",
         "value":0.55,
         "name":"cf3298bb5cbfd41aa44ba18b4f305a36"
       }
-    },
-    "total":111.55
+    ]
   }
 }
 
@@ -329,14 +323,63 @@
 ```
 
 ### php assessment.php 3
-(No orders without items, therefore, nothing is returned)
+After giving it some thought, I think the author's intention was to return only the orders, but NOT the order items
 
 ```json
 
-{}
+{
+  "0":{
+    "date":1506476504,
+    "total":111.55,
+    "customer":{
+      "id":"BQYLCQ0CCwIOBgYNBAcACw",
+      "name":"Bob"
+    }
+  },
+  "1":{
+    "date":1506480104,
+    "total":111.55,
+    "customer":{
+      "id":"BQYLCQ0CCwIOBgYNBAcACw",
+      "name":"Bob"
+    }
+  },
+  "2":{
+    "date":1506562904,
+    "total":111.55,
+    "customer":{
+      "id":"CQwPDAkDDAQLBQsOBAcMBw",
+      "name":"Jan"
+    }
+  },
+  "3":{
+    "date":1507081304,
+    "total":111.55,
+    "customer":{
+      "id":"BQYLCQ0CCwIOBgYNBAcACw",
+      "name":"Bob"
+    }
+  },
+  "4":{
+    "date":1509068504,
+    "total":111.55,
+    "customer":{
+      "id":"AgsIBAsFAwYCCw8GBAINAQ",
+      "name":"Steve"
+    }
+  },
+  "5":{
+    "date":1538012504,
+    "total":111.55,
+    "customer":{
+      "id":"DAEFDQwPDwMCCwULBAAMDg",
+      "name":"Fred"
+    }
+  }
+}
 
 ```
 
 ### Browser
-## php -S localhost:8000
-## http://localhost:8000/assessment.php?param=2
+#### php -S localhost:8000
+#### http://localhost:8000/assessment.php?param=2
